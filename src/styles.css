@@ -1,0 +1,233 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+  font-family: Inter, Arial;
+  --orange: #F76B10;
+  --yellow: #FBBE47;
+  --blue: #3E82F7;
+  --green: #29D697;
+  --dark-orange: #8C3700;
+  --white: #FFFFFF;
+  --grey: #F0F0EE;
+  --grey2: #E1E1E1;
+  --soft-dark: #4A4D55;
+  --orange-linear: #F76B10;
+  --black-linear: #171924;
+  --button-linear: #20222C;
+  --devider-linear: hsla(230, 16%, 15%, 0.2);
+  --text-black: #20222C;
+  --text-white: #FDFDFD;
+  --info: #2F80ED;
+  --success: #27AE60;
+  --warning: #E2B93B;
+  --error: #EB5757;
+  --info: #2F80ED;
+  background: hsl(0, 0%, 96%);
+}
+
+*{
+  margin: 0;
+}
+
+.sidebar{
+  width: 220px;
+  height: 100vh;
+  background: var(--white);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: fixed;
+}
+
+.side-links ul li{
+  margin-left: -3rem;
+  margin-bottom: 1rem;
+  padding: .3rem;
+  border-radius: .3rem;
+  padding: .7rem 0;
+  padding-left: .5rem;
+}
+
+.side-links ul li:hover{
+  background: var(--grey);
+}
+
+.side-links ul li a{
+  text-decoration: none;
+  color: var(--soft-dark);
+  padding: 2rem 0;
+}
+
+
+.top-container{
+  background: var(--button-linear);
+  width: 100%;
+  display: flex;
+  padding: 2rem 0rem;
+  justify-content: space-between;
+}
+
+.top-container input{
+  margin-right: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  width: 30rem;
+  border-radius: .5rem;
+  border: none;
+  background: var(--soft-dark);
+  color: var(--white);
+}
+
+.event-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.event-card{
+  background: var(--white);
+  border-radius: 1.3rem;
+  padding: 1rem;
+}
+
+.event-card img{
+  width: 100%;
+  background: #d6d6d6;
+  height: 10rem;
+  border-radius: .7rem;
+  margin-bottom: .8rem;
+  object-fit: cover;
+}
+
+.event-card .title{
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-black);
+}
+
+.event-card a{
+  padding: 1rem;
+  text-decoration: none;
+  background: var(--button-linear);
+  color: var(--text-white);
+  border-radius: 1rem;
+}
+
+.event-card .btn{
+  margin-bottom: 1rem;
+}
+
+.popular-container{
+  padding: 1.5rem;
+}
+
+.popular-container .input{
+  margin-bottom: 1.5rem;
+}
+
+.popular-container .filters{
+  margin-bottom: 2rem;
+  display: flex;
+  gap: .8rem;
+}
+
+.popular-container .filters .upcoming{
+  padding: 1rem 1.5rem; 
+  background: var(--grey2);
+  border-radius: 1rem;
+  color: var(--soft-dark);
+  text-decoration: none;
+}
+
+
+.popular-container .input input{
+  padding: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: .5rem;
+  border: none;
+}
+
+.single-container{
+  padding: 1rem;
+}
+
+.single-card{
+  padding: 1rem;
+  background: var(--white);
+  border-radius: 1rem;
+}
+
+.single-card img{
+  width: 100%;
+  background: #d6d6d6;
+  height: 15rem;
+  border-radius: .7rem;
+  margin-bottom: .8rem;
+  object-fit: cover;
+}
+
+.single-card .title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: .8rem;
+  color: var(--text-black);
+}
+
+.single-card .location{
+  color: var(--soft-dark);
+}
+
+.single-card .price{
+  padding: 1rem;
+  background: hsl(24, 94%, 92%);
+  color: var(--orange);
+  border-radius: 1rem;
+}
+
+.single-card .user-detail .image img{
+  width: 3rem;
+  height: 3rem;
+  background: #d6d6d6;
+  border-radius: 2rem;
+}
+
+.single-card .user-detail .username{
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+  color: var(--text-black);
+}
+
+.single-card .user-detail .position{
+  color: var(--soft-dark);
+}
+
+.single-card .desc{
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.single-card p{
+  line-height: 1.5;
+  color: var(--soft-dark);
+  margin-bottom: 1rem;
+}
+
+.single-card a{
+  margin-right: .5rem;
+  padding: 1.2rem;
+  background: var(--button-linear);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 1rem;
+}
+
+.single-card a.buy{
+  padding: 1.2rem 5rem;
+}

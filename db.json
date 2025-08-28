@@ -1,0 +1,95 @@
+{
+  "event": [
+    {
+    "title": "Tech Innovators Conference 2025",
+    "location": "Eko Hotel, Lagos, Nigeria",
+    "imageUrl": "https://picsum.photos/200/300?random=1",
+    "author": "Tech Africa",
+    "date": "2025-09-15",
+    "price": "$120",
+    "id": "1",
+    "userpfp": "https://picsum.photos/50/50?random=1",
+    "username": "tech_africa",
+    "position": "Organizer",
+    "desc": "A 3-day event bringing together top minds in technology, startups, and innovation across Africa."
+  },
+  {
+    "title": "Afrobeats Music Festival",
+    "location": "Accra Sports Stadium, Ghana",
+    "imageUrl": "https://picsum.photos/200/300?random=2",
+    "author": "Live Nation Ghana",
+    "date": "2025-10-05",
+    "price": "$75",
+    "id": "2",
+    "userpfp": "https://picsum.photos/50/50?random=2",
+    "username": "livenation_gh",
+    "position": "Event Host",
+    "desc": "Experience electrifying performances from top Afrobeats stars with over 30,000 fans."
+  },
+  {
+    "title": "Startup Pitch Night",
+    "location": "Nairobi Innovation Hub, Kenya",
+    "imageUrl": "https://picsum.photos/200/300?random=3",
+    "author": "Nairobi Hub",
+    "date": "2025-09-25",
+    "price": "$30",
+    "id": "3",
+    "userpfp": "https://picsum.photos/50/50?random=3",
+    "username": "nairobihub",
+    "position": "Organizer",
+    "desc": "Watch 20 startups pitch their ideas to investors and stand a chance to secure funding."
+  },
+  {
+    "title": "Global Fashion Week",
+    "location": "Cape Town Convention Centre, South Africa",
+    "imageUrl": "https://picsum.photos/200/300?random=4",
+    "author": "Cape Fashion",
+    "date": "2025-11-01",
+    "price": "$150",
+    "id": "4",
+    "userpfp": "https://picsum.photos/50/50?random=4",
+    "username": "capefashion",
+    "position": "Host",
+    "desc": "A week-long showcase of Africa’s top fashion designers, models, and stylists."
+  },
+  {
+    "title": "Food & Culture Expo",
+    "location": "SilverBird Galleria, Abuja, Nigeria",
+    "imageUrl": "https://picsum.photos/200/300?random=5",
+    "author": "Taste of Africa",
+    "date": "2025-09-20",
+    "price": "$20",
+    "id": "5",
+    "userpfp": "https://picsum.photos/50/50?random=5",
+    "username": "taste_africa",
+    "position": "Organizer",
+    "desc": "Discover the best of African cuisines, cultural displays, and food exhibitions."
+  },
+  {
+    "title": "AI & Future of Work Summit",
+    "location": "Hilton Hotel, Kigali, Rwanda",
+    "imageUrl": "https://picsum.photos/200/300?random=6",
+    "author": "FutureTech Rwanda",
+    "date": "2025-09-28",
+    "price": "$90",
+    "id": "6",
+    "userpfp": "https://picsum.photos/50/50?random=6",
+    "username": "futuretech_rw",
+    "position": "Organizer",
+    "desc": "Industry leaders and researchers discuss how AI is shaping jobs, skills, and opportunities."
+  },
+  {
+    "title": "Christmas Gala Night",
+    "location": "The Dorchester, London, UK",
+    "imageUrl": "https://picsum.photos/200/300?random=7",
+    "author": "Elite Events London",
+    "date": "2025-12-24",
+    "price": "$200",
+    "id": "7",
+    "userpfp": "https://picsum.photos/50/50?random=7",
+    "username": "elite_events",
+    "position": "Event Planner",
+    "desc": "An exclusive red-carpet gala with fine dining, live performances, and festive celebration."
+  }
+  ]
+}
