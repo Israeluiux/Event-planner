@@ -42,7 +42,7 @@
   position: fixed;
 }
 
-.side-links ul li{
+.side-links ul li {
   margin-left: -3rem;
   margin-bottom: 1rem;
   padding: .3rem;
@@ -51,14 +51,23 @@
   padding-left: .5rem;
 }
 
-.side-links ul li:hover{
-  background: var(--grey);
+
+.side-links .navlink.active{
+  background: var(--orange-linear);
+  color: #fff;
+}
+  
+  .side-links ul li .navlink{
+  color: #4A4D55;
+  text-decoration: none;
+  padding: .7rem 0;
+  padding-right: 2rem;
+  padding-left: .5rem;
+  border-radius: .3rem;
 }
 
-.side-links ul li a{
-  text-decoration: none;
-  color: var(--soft-dark);
-  padding: 2rem 0;
+.side-links .linkactive{
+  color: var(--white);
 }
 
 
@@ -68,6 +77,8 @@
   display: flex;
   padding: 2rem 0rem;
   justify-content: space-between;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
 }
 
 .top-container input{
@@ -110,11 +121,12 @@
 }
 
 .event-card a{
-  padding: 1rem;
+  padding: .7rem 1rem;
   text-decoration: none;
   background: var(--button-linear);
   color: var(--text-white);
-  border-radius: 1rem;
+  border-radius: .8rem;
+  margin-right: .5rem;
 }
 
 .event-card .btn{
@@ -129,18 +141,23 @@
   margin-bottom: 1.5rem;
 }
 
-.popular-container .filters{
+.popular-container .filters, .filters{
   margin-bottom: 2rem;
   display: flex;
   gap: .8rem;
 }
 
-.popular-container .filters .upcoming{
+.popular-container .filters .upcoming, .category{
   padding: 1rem 1.5rem; 
   background: var(--grey2);
   border-radius: 1rem;
   color: var(--soft-dark);
   text-decoration: none;
+}
+
+.activecom{
+  background: var(--orange);
+  color: var(--text-white);
 }
 
 
@@ -165,7 +182,7 @@
 .single-card img{
   width: 100%;
   background: #d6d6d6;
-  height: 15rem;
+  height: 25rem;
   border-radius: .7rem;
   margin-bottom: .8rem;
   object-fit: cover;
@@ -230,4 +247,105 @@
 
 .single-card a.buy{
   padding: 1.2rem 5rem;
+}
+
+.category-card{
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.category-card .location, .date{
+  color: var(--soft-dark);
+}
+
+.category-card .price{
+  color: var(--orange);
+}
+
+.categoryImg{
+  background: #d6d6d6;
+  height: 4rem;
+  width: 4rem;
+  border-radius: .6rem;
+}
+
+.categoryImg img{
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+   border-radius: .6rem;
+}
+
+.category-card .left-card{
+  padding: .3rem 1rem;
+  border-Left: 1px solid #d6d6d6;
+  display: flex;
+  flex-Direction: column;
+  gap: .5rem;
+  align-Items: center 
+}
+
+.category-card .left-card a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--button-linear);
+}
+
+.create-card{
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  margin-bottom: 2rem;
+}
+
+.form-group input, textarea{
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  border: 1px solid var(--grey2);
+}
+
+.form-group textarea{
+  min-height: 10rem;
+}
+
+.form-group label{
+  margin-left: 1rem;
+  color: var(--text-black);
+  margin-bottom: .8rem;
+  /* font-weight: bold; */
+}
+
+.form .btn{
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  background: var(--button-linear);
+  color: var(--white);
+}
+
+.btns .delete{
+  padding: 1.1rem 1rem;
+  text-decoration: none;
+  background: var(--error);
+  color: var(--text-white);
+  border-radius: .8rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.btns .edit{
+  background: var(--success);
 }

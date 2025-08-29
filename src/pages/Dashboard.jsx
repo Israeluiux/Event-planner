@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 import Eventlist from "../components/Eventlist"
 import { useEffect, useState } from "react"
+import CategoryCard from "../components/CategoryCard"
+import Subhead from "../components/Subhead"
 
 const Dashboard = () => {
     const [event, setEvent] = useState([])
@@ -24,7 +26,7 @@ const Dashboard = () => {
             <div className="top-container" >
                 <div className="user-detail" style={{color: 'white', marginLeft: '1rem'}}>
                     <div style={{marginBottom: '0.5rem'}}>Hi Welcome 👋🏼</div>
-                    <p style={{fontWeight: 'bold', fontSize: '1.2rem'}}>Guest</p>
+                    <p style={{fontWeight: 'bold', fontSize: '1.2rem'}}>Balogun Israel</p>
                 </div>
                 <div>
                     <input type="text" placeholder="Find amazing events" />
@@ -33,12 +35,16 @@ const Dashboard = () => {
 
             {/* bottom container */}
             <div className="bottom-container" style={{padding: '1.5rem'}}>
-                <div className="popular" style={{display: 'flex', justifyContent: 'space-between', marginBottom: '1.5rem'}}>
-                    <div style={{fontSize: '1.4rem', fontWeight: 'bold'}}>Popular Events🔥</div>
-                    <Link to='popularevent' style={{textDecoration: 'none', color: '#F76B10'}}>View all</Link>
-                </div>
-
-                <Eventlist events={event} />
+            <Subhead title='Popular Events 🔥' link='View all' />
+            <Eventlist events={event} />
+            <Subhead title='Choose By Category✨' link='View all' />
+            <div className="filters">
+                <NavLink to='/' className={({isActive}) => isActive ? 'category activecom' : 'category'}>Design</NavLink>
+                <NavLink to='oo' className="category">Art</NavLink>
+                <NavLink className="category">Sports</NavLink>
+                <NavLink className="category">Music</NavLink>
+            </div>
+            <CategoryCard events={event} />
             </div>
         </div>
     )
