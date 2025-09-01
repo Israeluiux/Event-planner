@@ -10,16 +10,26 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchdata = async () => {
             try {
-                const response = await fetch('http://localhost:4000/event')
+                const response = await fetch('http://localhost:4000/admin')
                 const data = await response.json()
-                setEvent(data.slice(0,3))
+
+                const today = new Date()
+                today.setHours(0,0,0,0)
+
+                const updatedData = data.map((item) => {
+                    const itemDate = new Date(item.date)
+                    itemDate.getHours(0,0,0,0)
+
+                    return {...item, isPast: itemDate < today}
+                })
+                setEvent(updatedData.slice(0,3))
             } catch (error) {
                 console.error(error)
             }
         }
 
         fetchdata()
-    }, [])
+    }, [event])
 
     return (
         <div className="dashboard-container">
@@ -39,8 +49,8 @@ const Dashboard = () => {
             <Eventlist events={event} />
             <Subhead title='Choose By Category✨' link='View all' />
             <div className="filters">
-                <NavLink to='/' className={({isActive}) => isActive ? 'category activecom' : 'category'}>Design</NavLink>
-                <NavLink to='oo' className="category">Art</NavLink>
+                <NavLink to='/' className={({isActive}) => isActive ? 'category activecom' : 'category'}>🎨Design</NavLink>
+                <NavLink to='oo' className="category">🎭Art</NavLink>
                 <NavLink className="category">Sports</NavLink>
                 <NavLink className="category">Music</NavLink>
             </div>

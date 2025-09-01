@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
-import Eventcard from "../components/Eventcard"
 import { Link, useNavigate, useParams } from "react-router-dom"
+import { FaCalendar, FaLocationArrow } from 'react-icons/fa'
 
 const MyEvents = () => {
     const [loading, setLoading] = useState(true)
@@ -13,7 +13,18 @@ const MyEvents = () => {
         try {
             const response = await fetch('http://localhost:4000/event')
             const data = await response.json()
-            setEvent(data)
+
+            const today = new Date()
+                today.setHours(0,0,0,0)
+
+            const updatedData = data.map((item) => {
+                const itemDate = new Date(item.date)
+                itemDate.getHours(0,0,0,0)
+
+                return {...item, isPast: itemDate < today}
+            })
+            setEvent(updatedData)
+            // setEvent(data)
             setLoading(false)
         } catch (error) {
             console.error(error)
@@ -23,22 +34,6 @@ const MyEvents = () => {
     fetchdata()
     }, [])
 
-    const handleDelete = async () => {
-        if(window.confirm('are you sure you want to delete?'))
-        try {
-            const response = await fetch(`http://localhost:4000/event/${id}`, {
-                method: 'DELETE'
-            })
-            if(!response.ok){
-                return 'Failed to fetch events'
-            }
-
-            navigate('/myevents')
-        } catch (error) {
-            console.error(error)
-        }
-    }
-
     if(loading === true){
         return <div>Loading</div>
     }
@@ -47,16 +42,19 @@ const MyEvents = () => {
     return (
         <>
            <div className="popular-container">
+                <div style={{fontSize: '1.4rem', fontWeight: 'bold', marginBottom: '1rem'}}>Manage my events</div>
              <div className="event-container">
             {
-                event.map(events => ( 
-
-                <div className="event-card">
+                event.map((events) =>  ( 
+                    
+                <div className="event-card" key={events.id}>
                 <img src={events.imageUrl} alt="" />
                 <div className="title">{events.title.substring(0, 20)}...</div>
+                {/* <div className="title">{events.title}...</div> */}
                 <div style={{display: 'flex', justifyContent: 'space-between', marginBottom: '2rem', color: '#4A4D55'}}>
-                    <div className="date">{events.date}</div>
-                    <div className="location">{events.location.substring(0, 15)}</div>
+                    <div className="date"><FaCalendar size={13} color="#F76B10" /> {events.date}</div>
+                    {/* <div className="location">{events.location}</div> */}
+                    <div className="location"><FaLocationArrow size={13} color="#F76B10" /> {events.location.substring(0, 15)}</div>
                 </div>
                 <div className="btn">
                 <Link className="edit" to={`manage-event/${events.id}`}>Manage event</Link>

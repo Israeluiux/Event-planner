@@ -1,11 +1,59 @@
 {
   "event": [
     {
+      "id": "f115",
+      "title": "CHE vs EVE",
+      "location": "Craven Cottage",
+      "imageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p07hv3hs.jpg",
+      "date": "2025-09-10",
+      "price": "$400",
+      "host": "Everton FC",
+      "desc": "Yap yap",
+      "position": "Football Club",
+      "isPast": false
+    },
+    {
+      "id": "5b83",
+      "title": "RMA vs MUN",
+      "location": "Old Trafford",
+      "imageUrl": "https://www.soccerscene.com.au/wp-content/uploads/2024/07/Stretford_End_Old_Trafford.jpg",
+      "date": "2025-07-19",
+      "price": "$290.99",
+      "host": "Manchester United",
+      "desc": "Nothiung",
+      "position": "Football Club"
+    },
+    {
+      "id": "6d16",
+      "title": "Light Up Ojodu",
+      "location": "Ojudu, Lagos",
+      "imageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p07hv3hs.jpg",
+      "date": "2025-09-09",
+      "price": "20",
+      "host": "Davido",
+      "desc": "Anticipate like madddttt",
+      "position": "Host"
+    },
+    {
+      "id": "84d4",
+      "title": "Testing test",
+      "location": "Heaven",
+      "imageUrl": "http://localhost:5173/src/assets/dp.jpg",
+      "date": "2025-08-27",
+      "price": "0",
+      "host": "Micah",
+      "desc": "Make heaven, it is that simple",
+      "position": "Angel",
+      "isPast": false
+    }
+  ],
+  "admin": [
+    {
       "title": "Tech Innovators Conference 2025",
       "location": "Eko Hotel, Lagos, Nigeria",
       "imageUrl": "https://ekohotels.com/assets/img/gallery/ga-hotel-2.jpg",
       "author": "Tech Africa",
-      "date": "08 Oct, 25",
+      "date": "2025-08-28",
       "price": "$120",
       "id": "1",
       "userpfp": "https://picsum.photos/50/50?random=1",
@@ -18,7 +66,7 @@
       "location": "Accra Sports Stadium, Ghana",
       "imageUrl": "https://th.bing.com/th/id/R.7520db38d4ce59c0b8caf94e4a10c9f0?rik=AJ8mhCA%2b%2f8SI%2fg&pid=ImgRaw&r=0",
       "author": "Live Nation Ghana",
-      "date": "08 Jan, 25",
+      "date": "2025-08-28",
       "price": "$75",
       "id": "2",
       "userpfp": "https://picsum.photos/50/50?random=2",
@@ -31,7 +79,7 @@
       "location": "SilverBird Galleria, Abuja, Nigeria",
       "imageUrl": "https://image.architonic.com/prj2-3/20752111/event-center-satama-ala-architects-20-arcit18.jpg",
       "author": "Taste of Africa",
-      "date": "08 May, 25",
+      "date": "2025-08-28",
       "price": "$20",
       "id": "5",
       "userpfp": "https://picsum.photos/50/50?random=5",
@@ -44,13 +92,25 @@
       "location": "Hilton Hotel, Kigali, Rwanda",
       "imageUrl": "https://th.bing.com/th/id/R.5efc967537ebd4009e3cd29531ef6086?rik=L%2bQ5Rcutz02Ltg&riu=http%3a%2f%2farchitizer-prod.imgix.net%2fmedia%2f1430409135934TIC_studiostratum-543-K2_2880.jpg%3fq%3d60%26auto%3dformat%2ccompress%26cs%3dstrip%26w%3d1680&ehk=S2dXCf7djr%2bEDQd8nAWrJYC0nRobKGu%2bohlAdePRZy8%3d&risl=&pid=ImgRaw&r=0",
       "author": "FutureTech Rwanda",
-      "date": "08 Dec, 25",
+      "date": "2025-08-28",
       "price": "$90",
       "id": "6",
       "userpfp": "https://picsum.photos/50/50?random=6",
       "host": "futuretech_rw",
       "position": "Organizer",
       "desc": "Industry leaders and researchers discuss how AI is shaping jobs, skills, and opportunities."
+    },
+    {
+      "id": "ff07",
+      "title": "CHE vs BAR",
+      "location": "Stamford Bridge",
+      "imageUrl": "https://img.chelseafc.com/image/upload/f_auto,c_fill,g_auto,w_1200,ar_16:9,q_90/editorial/news/2018/5/Stamford-Bridge-917463626.jpg",
+      "author": "Balogun Israel",
+      "date": "2025-08-28",
+      "price": "$250",
+      "host": "Balogun Israel",
+      "desc": "Nil",
+      "position": "Football Manager"
     }
   ]
 }

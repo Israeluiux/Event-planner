@@ -349,3 +349,20 @@
 .btns .edit{
   background: var(--success);
 }
+
+.images{
+  height: 8rem;
+  width: 8rem;
+  background: #d6d6d6;
+  border-radius: 10rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.more-card{
+  padding: 1rem;
+  width: 15rem;
+  height: auto;
+  background: hsl(0, 0%, 98%);
+  border-radius: .7rem;
+}

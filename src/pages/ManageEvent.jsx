@@ -68,7 +68,7 @@ export default function ManageEvent(){
                     <div className="desc">Description</div>
                     <p>{event.desc}</p>
                     <div className="btns" style={{marginBottom: '2rem', marginTop: '2rem'}}>
-                        <Link className="edit">Edit</Link>
+                        <Link to='edit-event' className="edit">Edit</Link>
                         <button className="delete" onClick={handleDelete}>Delete</button>
                     </div>
                 </div>

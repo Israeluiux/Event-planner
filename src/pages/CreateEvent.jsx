@@ -5,12 +5,12 @@ export default function () {
     const [title, setTitle] = useState('')
     const [location, setLocation] = useState('')
     const [imageUrl, setImageUrl] = useState('')
-    const [author, setAuthor] = useState('')
     const [date, setDate] = useState('')
     const [price, setPrice] = useState('')
     const [host, setHost] = useState('')
     const [desc, setDesc] = useState('')
     const [position, setPosition] = useState('')
+    const [isPast, setIsPast] = useState(null)
     const navigate = useNavigate()
     
     
@@ -21,12 +21,12 @@ export default function () {
             title,
             location,
             imageUrl,
-            author,
             date,
             price,
             host,
             desc,
-            position
+            position,
+            isPast
         }
         try {
             const response = await fetch('http://localhost:4000/event', {
@@ -37,6 +37,22 @@ export default function () {
             navigate('/event')
         } catch (error) {
             console.error(error)
+        }
+    }
+
+    const handleDate = (e) => {
+        const input = e.target.value
+        const inputDate = new Date(input)
+        const today = new Date()
+        setDate(input)
+        // setDate(input)
+        inputDate.setHours(0,0,0,0)
+        today.setHours(0,0,0,0)
+
+        if(inputDate < today){
+            setIsPast(true)
+        } else{
+            setIsPast(false)
         }
     }
     
@@ -73,9 +89,9 @@ export default function () {
             <div className="form-group">
                 <label>Select Event Date</label>
                 <input 
-                type="text"
+                type="date"
                 placeholder="Choose Event Date"
-                onChange={(e) => setDate(e.target.value)}
+                onChange={handleDate}
                 required
                     />
             </div>
@@ -111,16 +127,6 @@ export default function () {
             </div>
 
             <div className="form-group">
-                <label>Your Name</label>
-                <input 
-                type="text"
-                placeholder="Enter your name"
-                onChange={(e) => setAuthor(e.target.value)}
-                required
-                    />
-            </div>
-
-            <div className="form-group">
                 <label>Event Url</label>
                 <input 
                 type="text"
@@ -139,7 +145,7 @@ export default function () {
                 required
                     />
             </div>
-        <button type="submit" className="btn">Update Post</button>
+        <button type="submit" className="btn">Create events</button>
     </form>
             </div>
         </div>

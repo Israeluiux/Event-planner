@@ -1,18 +1,25 @@
 import { useState, useEffect } from "react"
 import Eventcard from "../components/Eventcard"
 import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 export default function PopularEvent () {
     const [event, setEvent] = useState([])
     const [search, setSearch] = useState('')
     const [loading, setLoading] = useState(true)
+    const navigate = useNavigate()
     
     useEffect(() => {
         const fetchdata = async () => {
             try {
-                const response = await fetch('http://localhost:4000/event')
-                const data = await response.json()
-                setEvent(data)
+                const [response1, response2] = await Promise.all([
+                    fetch('http://localhost:4000/admin'),
+                    fetch('http://localhost:4000/event'),   
+                ])
+                const adminevent = await response1.json()
+                const myevent = await response2.json()
+                const allEvent = [...adminevent, ...myevent]
+                setEvent(allEvent)
                 setLoading(false)
             } catch (error) {
                 console.error(error)
@@ -42,7 +49,9 @@ export default function PopularEvent () {
                 ).map(event => (
                     <Eventcard key={event.id} event={event} />
                 ))
+                
             }
+            
             </div>
         </div>
     )
