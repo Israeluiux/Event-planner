@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { FaCalendar, FaLocationArrow } from 'react-icons/fa'
+import Loading from "../components/Loading"
+import Error from "../components/Error"
 
 const MyEvents = () => {
     const [loading, setLoading] = useState(true)
     const [event, setEvent] = useState([])
+    const [error, setError] = useState('')
     const { id } = useParams()
     const navigate = useNavigate()
 
@@ -27,16 +30,16 @@ const MyEvents = () => {
             // setEvent(data)
             setLoading(false)
         } catch (error) {
-            console.error(error)
+            setError(error)
+            setLoading(false)
         }
     }
 
     fetchdata()
     }, [])
 
-    if(loading === true){
-        return <div>Loading</div>
-    }
+    if(loading){ return <Loading /> }
+    if(error){ return <Error /> }
 
     
     return (

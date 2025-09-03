@@ -1,10 +1,13 @@
 import { useParams, Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 import SingleEventCard from "../components/SingleEventCard"
+import Loading from "../components/Loading"
+import Error from "../components/Error"
 
 export default function SingleEvent () {
     const [event, setEvent] = useState()
-    const [Loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState()
     const { id } = useParams()
 
 
@@ -20,7 +23,8 @@ export default function SingleEvent () {
                 setEvent(adminevent || myevent)
                 setLoading(false)
             } catch (error) {
-                console.error(error)
+                setError(error)
+                setLoading(false)
             }
         }
 
@@ -28,7 +32,8 @@ export default function SingleEvent () {
     }, [id])
     
     
-    if(Loading == true){ return <div>Loading...</div>}
+    if(loading == true){ return <Loading />}
+    if(error){ return <Error />}
 
     return(
         <>

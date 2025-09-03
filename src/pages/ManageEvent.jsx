@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
+import Loading from "../components/Loading"
+import Error from "../components/Error"
 
 export default function ManageEvent(){
     const [event, setEvent] = useState([])
     const [loading, setLoading] = useState(true)
+    const [error, setError] = useState('')
     const { id } = useParams()
     const navigate = useNavigate()
 
@@ -18,7 +21,8 @@ export default function ManageEvent(){
                 setEvent(data)
                 setLoading(false)
             } catch (error) {
-                console.error(error)
+                setError(error)
+                setLoading(false)
             }
         }
 
@@ -40,9 +44,8 @@ export default function ManageEvent(){
         }
     }
 
-    if(loading === true){
-        return <div>Loading</div>
-    }
+    if(loading === true){  return <Loading />  }
+    if(error){  return <Error />  }
 
     return(
         <div className="single-container">

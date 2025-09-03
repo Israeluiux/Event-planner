@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react"
 import Eventcard from "../components/Eventcard"
 import { Link } from "react-router-dom"
-import { useNavigate } from "react-router-dom"
+import Loading from "../components/Loading"
+import Error from "../components/Error"
 
 export default function PopularEvent () {
     const [event, setEvent] = useState([])
     const [search, setSearch] = useState('')
     const [loading, setLoading] = useState(true)
-    const navigate = useNavigate()
+    const [error, setError] = useState()
+
     
     useEffect(() => {
         const fetchdata = async () => {
@@ -22,7 +24,8 @@ export default function PopularEvent () {
                 setEvent(allEvent)
                 setLoading(false)
             } catch (error) {
-                console.error(error)
+                setError(error)
+                setLoading(false)
             }
         }
 
@@ -30,7 +33,11 @@ export default function PopularEvent () {
     }, [])
 
     if(loading === true){
-        return <div>Loading</div>
+        return <Loading />
+    }
+
+    if(error){
+        return <Error />
     }
 
     return (

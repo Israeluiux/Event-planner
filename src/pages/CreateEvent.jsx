@@ -11,12 +11,14 @@ export default function () {
     const [desc, setDesc] = useState('')
     const [position, setPosition] = useState('')
     const [isPast, setIsPast] = useState(null)
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState('')
     const navigate = useNavigate()
     
     
     const handleSubmit = async (e) => {
         e.preventDefault()
-
+        setLoading(true)
         const eventData = {
             title,
             location,
@@ -33,10 +35,13 @@ export default function () {
                 method: 'POST',
                 body: JSON.stringify(eventData)
             })
-
+            setLoading(false)
             navigate('/event')
         } catch (error) {
-            console.error(error)
+            setError(error)
+            setTimeout(() => {
+                setError('')
+            }, 6000);
         }
     }
 
@@ -56,7 +61,7 @@ export default function () {
         }
     }
     
-
+    {loading && <div>Creating event...</div>}
 
     return (
         <>
@@ -145,6 +150,7 @@ export default function () {
                 required
                     />
             </div>
+            {error && <p style={{marginBottom: '1rem', color: 'red', fontWeight: 'bold'}}>Error submitting form</p>}
         <button type="submit" className="btn">Create events</button>
     </form>
             </div>

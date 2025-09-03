@@ -3,9 +3,13 @@ import Eventlist from "../components/Eventlist"
 import { useEffect, useState } from "react"
 import CategoryCard from "../components/CategoryCard"
 import Subhead from "../components/Subhead"
+import Error from "../components/Error"
+import Loading from "../components/Loading"
 
 const Dashboard = () => {
     const [event, setEvent] = useState([])
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState()
 
     useEffect(() => {
         const fetchdata = async () => {
@@ -23,14 +27,24 @@ const Dashboard = () => {
                     return {...item, isPast: itemDate < today}
                 })
                 setEvent(updatedData.slice(0,3))
+                setLoading(false)
             } catch (error) {
-                console.error(error)
+                setError(error)
+                setLoading(false)
             }
         }
 
         fetchdata()
-    }, [event])
+    }, [])
 
+    if(loading){
+        return <Loading />
+    }
+
+    if(error){
+        return <Error />
+    }
+    
     return (
         <div className="dashboard-container">
             <div className="top-container" >
