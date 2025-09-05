@@ -366,3 +366,11 @@
   background: hsl(0, 0%, 98%);
   border-radius: .7rem;
 }
+
+.admin{
+  padding: 1rem;
+  background: #fff;
+  text-decoration: none;
+  color: #000;
+  border-radius: .8rem;
+}

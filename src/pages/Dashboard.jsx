@@ -5,6 +5,7 @@ import CategoryCard from "../components/CategoryCard"
 import Subhead from "../components/Subhead"
 import Error from "../components/Error"
 import Loading from "../components/Loading"
+import { FaSearch } from "react-icons/fa"
 
 const Dashboard = () => {
     const [event, setEvent] = useState([])
@@ -52,8 +53,12 @@ const Dashboard = () => {
                     <div style={{marginBottom: '0.5rem'}}>Hi Welcome 👋🏼</div>
                     <p style={{fontWeight: 'bold', fontSize: '1.2rem'}}>Balogun Israel</p>
                 </div>
-                <div>
-                    <input type="text" placeholder="Find amazing events" />
+                <div style={{display: 'flex', marginRight: '1rem'}}>
+                    <div style={{position: 'relative'}}>
+                        <input type="text" placeholder={`Find amazing events`} />
+                        <FaSearch style={{position: 'absolute', right: '30', top: '15', color: 'white'}} />
+                    </div>
+                    <Link to='/admin' className="admin">Admin</Link>
                 </div>
             </div>
 

@@ -2,7 +2,7 @@
   "event": [
     {
       "id": "f115",
-      "title": "CHE vs EVE",
+      "title": "CHE vs ARS",
       "location": "Craven Cottage",
       "imageUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p07hv3hs.jpg",
       "date": "2025-09-10",
@@ -44,18 +44,6 @@
       "host": "Micah",
       "desc": "Make heaven, it is that simple",
       "position": "Angel",
-      "isPast": false
-    },
-    {
-      "id": "0a85",
-      "title": "new",
-      "location": "kuyah",
-      "imageUrl": "o;ijjk.ecw",
-      "date": "2025-09-26",
-      "price": "oyukhew",
-      "host": "WFEsd",
-      "desc": "BBBBBBBVncmbsdhnc",
-      "position": "efwsa",
       "isPast": false
     }
   ],

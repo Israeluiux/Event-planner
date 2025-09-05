@@ -26,7 +26,7 @@ export default function Profile(){
                 <div style={{fontSize: '1.3rem', fontWeight: 'bold'}}>Balogun Israel</div>
                 <div style={{display: 'flex', gap:'1rem'}}>
                     <Morecard name='Events Created' amount={eventAvail} />
-                    <Morecard name='Past Events' amount={0} />
+                    <Morecard name='Saved Events' amount={0} />
                     <Morecard name='Upcoming Events' amount={eventAvail} />
                 </div>
             </div>

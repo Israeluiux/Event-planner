@@ -9,15 +9,24 @@ import MyEvents from './pages/MyEvents';
 import Profile from './pages/Profile';
 import ManageEvent from './pages/ManageEvent';
 import EditEventPage from './pages/EditEventPage';
+import AdminLayout from './Admin/Pages/AdminLayout';
+import AdminDashboard from './Admin/Pages/AdminDashboard';
+import AllEvents from './Admin/Pages/Allevents';
+import AdminCreate from './Admin/Pages/AdminCreate';
 
 function App() {
   return (
     <div className="App">
       <div className="container">
         <Routes>
+          <Route path='admin' element={<AdminLayout />}>
+              <Route index path='dashboard' element={<AdminDashboard />} />
+              <Route path='all-event' element={<AllEvents />} />
+              <Route path='create-event' element={<AdminCreate />} />
+          </Route>
           <Route path="/" element={<Home />} >
             <Route index element={<Dashboard />} />
-            <Route path='dashboard' element={<Dashboard />} />
+            <Route path='/' element={<Dashboard />} />
             <Route path='event' element={<PopularEvent />} />
             <Route path='event/:id' element={<SingleEvent />} />
             <Route path='create-event' element={<CreateEvent />} />
