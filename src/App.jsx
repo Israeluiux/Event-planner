@@ -13,6 +13,7 @@ import AdminLayout from './Admin/Pages/AdminLayout';
 import AdminDashboard from './Admin/Pages/AdminDashboard';
 import AllEvents from './Admin/Pages/Allevents';
 import AdminCreate from './Admin/Pages/AdminCreate';
+import AdminSingleEvent from './Admin/Components/AdminSingleEvent';
 
 function App() {
   return (
@@ -20,9 +21,10 @@ function App() {
       <div className="container">
         <Routes>
           <Route path='admin' element={<AdminLayout />}>
-              <Route index path='dashboard' element={<AdminDashboard />} />
+              <Route index path='/admin' element={<AdminDashboard />} />
               <Route path='all-event' element={<AllEvents />} />
               <Route path='create-event' element={<AdminCreate />} />
+              <Route path='all-event/manage-event/:id' element={<AdminSingleEvent />} />
           </Route>
           <Route path="/" element={<Home />} >
             <Route index element={<Dashboard />} />

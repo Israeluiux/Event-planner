@@ -7,11 +7,9 @@ const AdminSidebar = () => {
       <NavLink to="/" className="logo" style={{textDecoration: 'none', fontWeight: 'bold', fontSize: '1.5rem', color: '#F76B10'}}>Event Planner</NavLink>
       <div className='side-links'>
         <ul style={{listStyle: 'none'}}>
-          <li><NavLink className={({isActive}) => isActive ? 'navlink active linkactive' : 'navlink'} to='dashboard'><FaUser style={{marginRight: '.5rem'}}/>Dashboard</NavLink></li>
+          <li><NavLink className={({isActive}) => isActive ? 'navlink active linkactive' : 'navlink'} to='/admin'><FaUser style={{marginRight: '.5rem'}}/>Dashboard</NavLink></li>
           <li><NavLink className='navlink' to='all-event'><FaStar style={{marginRight: '.5rem'}}/>All Events</NavLink></li>
           <li><NavLink className='navlink' to='create-event'><FaPlusCircle style={{marginRight: '.5rem'}}/>Create Events</NavLink></li>
-          {/* <li><NavLink className='navlink' to='admin-allevents'><FaCalendar style={{marginRight: '.5rem'}}/>All Events</NavLink></li> */}
-          {/* <li><NavLink className='navlink' to='profile'><FaUser style={{marginRight: '.5rem'}}/>Profile</NavLink></li> */}
         </ul>
       </div>
     </aside>

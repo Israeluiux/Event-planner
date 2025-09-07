@@ -49,19 +49,6 @@
   ],
   "admin": [
     {
-      "title": "Tech Innovators Conference 2025",
-      "location": "Eko Hotel, Lagos, Nigeria",
-      "imageUrl": "https://ekohotels.com/assets/img/gallery/ga-hotel-2.jpg",
-      "author": "Tech Africa",
-      "date": "2025-08-28",
-      "price": "$120",
-      "id": "1",
-      "userpfp": "https://picsum.photos/50/50?random=1",
-      "host": "tech_africa",
-      "position": "Organizer",
-      "desc": "A 3-day event bringing together top minds in technology, startups, and innovation across Africa."
-    },
-    {
       "title": "Afrobeats Music Festival",
       "location": "Accra Sports Stadium, Ghana",
       "imageUrl": "https://th.bing.com/th/id/R.7520db38d4ce59c0b8caf94e4a10c9f0?rik=AJ8mhCA%2b%2f8SI%2fg&pid=ImgRaw&r=0",
@@ -111,6 +98,18 @@
       "host": "Balogun Israel",
       "desc": "Nil",
       "position": "Football Manager"
+    },
+    {
+      "id": "5f19",
+      "title": "lol",
+      "location": "ldv",
+      "imageUrl": "EFAEF",
+      "date": "124234-03-24",
+      "price": "qaerfa",
+      "host": "EF",
+      "desc": "FASAEF",
+      "position": "ef",
+      "isPast": false
     }
   ]
 }
