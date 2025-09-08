@@ -1,4 +1,17 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "username": "israeluiux",
+      "password": "balogun123"
+    },
+    {
+      "id": 2,
+      "username": "daniel",
+      "password": "pass123"
+    }
+  ],
+
   "event": [
     {
       "id": "f115",

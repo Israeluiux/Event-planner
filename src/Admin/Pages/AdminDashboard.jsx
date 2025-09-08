@@ -1,15 +1,17 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import { Link } from "react-router-dom"
 import { FaSearch } from "react-icons/fa"
 import Morecard from "../../components/Morecard"
 import Loading from "../../components/States/Loading"
 import Error from "../../components/States/Error"
+import { AuthContext } from "../../Auth/AuthContext"
 
 const AdminDashboard = () => {
 
     const [loading, setLoading] = useState(true)
     const [event, setEvent] = useState(0)
     const [error, setError] = useState('')
+    const { auth } = useContext(AuthContext)
 
     useEffect(() => {
     const fetchdata = async () => {
@@ -43,7 +45,7 @@ const AdminDashboard = () => {
                 <div className="top-container" >
                     <div className="user-detail" style={{color: 'white', marginLeft: '1rem'}}>
                         <div style={{marginBottom: '0.5rem'}}>Hi Welcome 👋🏼</div>
-                        <p style={{fontWeight: 'bold', fontSize: '1.2rem'}}>Admin</p>
+                        {auth ?<p style={{fontWeight: 'bold', fontSize: '1.2rem'}}>{auth.username}</p>:  <p style={{fontWeight: 'bold', fontSize: '1.2rem'}}>Admin</p>}
                     </div>
                     <div style={{display: 'flex', marginRight: '1rem'}}>
                         <div style={{position: 'relative'}}>

@@ -1,27 +1,38 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import { FaExclamationTriangle } from "react-icons/fa"
 import { useNavigate, Link } from "react-router-dom"
+import { AuthContext } from '../../Auth/AuthContext'
 
 
 const LoginForm = () => {
+    const { login } = useContext(AuthContext)
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState(false)
     const navigate = useNavigate()
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        
-        if(username === 'israeluiux' && password === 'balogun123'){
-            navigate('/admin')
-        } else {
-            setError('Incorrect username or password')
-            setTimeout(() => {
-                setError('')
-            }, 5000);
-            // setUsername('')
-            setPassword('')
+
+        try {
+            let response = await fetch(`http://localhost:4000/users?username=${username}`)
+            let data = await response.json()
+
+            if( data.length > 0 && data[0].password === password ){
+                login(data[0])
+                navigate('/admin')
+            } else {
+                setError('Incorrect username or password')
+                setTimeout(() => {
+                    setError('')
+                }, 3000);
+                console.log(error)
+            }
+        } catch (error) {
+            console.error(error)
+            setError('Login failed')
         }
+        // setPassword('')
     }
 
     const backtouser = (e) => {
