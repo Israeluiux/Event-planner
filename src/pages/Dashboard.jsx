@@ -3,8 +3,8 @@ import Eventlist from "../components/Eventlist"
 import { useEffect, useState } from "react"
 import CategoryCard from "../components/CategoryCard"
 import Subhead from "../components/Subhead"
-import Error from "../components/Error"
-import Loading from "../components/Loading"
+import Error from "../components/States/Error"
+import Loading from "../components/States/Loading"
 import { FaSearch } from "react-icons/fa"
 
 const Dashboard = () => {
@@ -58,9 +58,9 @@ const Dashboard = () => {
                         <input type="text" placeholder={`Find amazing events`} />
                         <FaSearch style={{position: 'absolute', right: '30', top: '15', color: 'white'}} />
                     </div>
-                    <Link to='/admin' className="admin">Admin</Link>
+                    <Link to='/login' className="admin">Admin</Link>
                 </div>
-            </div>
+            </div>  
 
             {/* bottom container */}
             <div className="bottom-container" style={{padding: '1.5rem'}}>

@@ -1,8 +1,8 @@
 import { useParams, Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import Loading from "../../components/Loading"
-import Error from "../../components/Error"
+import Error from "../../components/States/Error"
+import Loading from "../../components/States/Loading"
 
 export default function AdminSingleEvent () {
     const [event, setEvent] = useState()

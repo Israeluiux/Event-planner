@@ -104,7 +104,7 @@ export default function AdminCreate() {
             <div className="form-group">
                 <label>Select Event Price</label>
                 <input 
-                type="value"
+                type="number"
                 placeholder="Choose Event Price"
                 onChange={(e) => setPrice(e.target.value)}
                 required

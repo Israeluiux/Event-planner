@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import Eventcard from "../components/Eventcard"
 import { Link } from "react-router-dom"
-import Loading from "../components/Loading"
-import Error from "../components/Error"
+import Error from "../components/States/Error"
+import Loading from "../components/States/Loading"
 
 export default function PopularEvent () {
     const [event, setEvent] = useState([])

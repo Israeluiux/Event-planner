@@ -2,8 +2,8 @@ import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { FaSearch } from "react-icons/fa"
 import Morecard from "../../components/Morecard"
-import Loading from "../../components/Loading"
-import Error from "../../components/Error"
+import Loading from "../../components/States/Loading"
+import Error from "../../components/States/Error"
 
 const AdminDashboard = () => {
 
@@ -33,6 +33,9 @@ const AdminDashboard = () => {
 
     fetchdata()
     }, [])
+
+    if(loading){ return <Loading /> }
+    if(error){ return <Error /> }
 
     return(
         <>

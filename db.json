@@ -45,6 +45,18 @@
       "desc": "Make heaven, it is that simple",
       "position": "Angel",
       "isPast": false
+    },
+    {
+      "id": "76a8",
+      "title": "Testing user",
+      "location": "user",
+      "imageUrl": "edwf",
+      "date": "2025-09-08",
+      "price": "user",
+      "host": "wefsd",
+      "desc": "sdsd",
+      "position": "svdd",
+      "isPast": false
     }
   ],
   "admin": [
@@ -109,6 +121,18 @@
       "host": "EF",
       "desc": "FASAEF",
       "position": "ef",
+      "isPast": false
+    },
+    {
+      "id": "68f0",
+      "title": "Testing Admin",
+      "location": "admin",
+      "imageUrl": "admin",
+      "date": "2025-09-08",
+      "price": "78",
+      "host": "dsad",
+      "desc": "admin\n",
+      "position": "admin",
       "isPast": false
     }
   ]

@@ -14,12 +14,14 @@ import AdminDashboard from './Admin/Pages/AdminDashboard';
 import AllEvents from './Admin/Pages/Allevents';
 import AdminCreate from './Admin/Pages/AdminCreate';
 import AdminSingleEvent from './Admin/Components/AdminSingleEvent';
+import Login from './Admin/auth/Login';
 
 function App() {
   return (
-    <div className="App">
-      <div className="container">
+    // <div className="App">
+    //   <div className="container">
         <Routes>
+          <Route path='/login' element={<Login />} />
           <Route path='admin' element={<AdminLayout />}>
               <Route index path='/admin' element={<AdminDashboard />} />
               <Route path='all-event' element={<AllEvents />} />
@@ -38,8 +40,8 @@ function App() {
             <Route path='myevents/manage-event/:id/edit-event' element={<EditEventPage />} />
           </Route>
         </Routes>
-      </div>
-    </div>
+    //   </div>
+    // </div>
   );
 }
 

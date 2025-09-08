@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
-import Loading from "../components/Loading"
-import Error from "../components/Error"
+import Error from "../components/States/Error"
+import Loading from "../components/States/Loading"
 
 export default function ManageEvent(){
     const [event, setEvent] = useState([])
