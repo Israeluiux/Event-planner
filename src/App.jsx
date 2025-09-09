@@ -15,6 +15,7 @@ import AllEvents from './Admin/Pages/Allevents';
 import AdminCreate from './Admin/Pages/AdminCreate';
 import AdminSingleEvent from './Admin/Components/AdminSingleEvent';
 import Login from './Admin/auth/Login';
+import ProtectedRoute from './Auth/ProtectedRoute';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
     //   <div className="container">
         <Routes>
           <Route path='/login' element={<Login />} />
-          <Route path='admin' element={<AdminLayout />}>
+          <Route path='admin' element={<ProtectedRoute />}>
               <Route index path='/admin' element={<AdminDashboard />} />
               <Route path='all-event' element={<AllEvents />} />
               <Route path='create-event' element={<AdminCreate />} />

@@ -15,11 +15,9 @@ const LoginForm = () => {
         e.preventDefault()
 
         try {
-            let response = await fetch(`http://localhost:4000/users?username=${username}`)
-            let data = await response.json()
+            const success = await login(username, password)
 
-            if( data.length > 0 && data[0].password === password ){
-                login(data[0])
+            if( success ){
                 navigate('/admin')
             } else {
                 setError('Incorrect username or password')
@@ -30,9 +28,9 @@ const LoginForm = () => {
             }
         } catch (error) {
             console.error(error)
-            setError('Login failed')
+            setError(error.message)
         }
-        // setPassword('')
+        setPassword('')
     }
 
     const backtouser = (e) => {
@@ -71,3 +69,6 @@ const LoginForm = () => {
 }
 
 export default LoginForm
+
+            // let response = await fetch(`http://localhost:4000/users?username=${username}`)
+            // let data = await response.json()
